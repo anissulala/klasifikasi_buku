@@ -126,7 +126,7 @@ def preprocess_judul(text):
 ddc_data = pd.read_excel('keterangan DDC.xlsx', sheet_name='data 3')
 ddc_data.dropna(inplace=True)
 #
-dict_ddc = {int(ddc_data['Klasifikasi level 2'][i]): ddc_data['DDC '][i] for i in range(len(ddc_data))}
+dict_ddc = {int(ddc_data['Klasifikasi'][i]): ddc_data['DDC '][i] for i in range(len(ddc_data))}
 
 # Inisialisasi session state
 if "riwayat_klasifikasi" not in st.session_state:
